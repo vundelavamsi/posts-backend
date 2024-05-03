@@ -1,0 +1,94 @@
+{
+	"info": {
+		"_postman_id": "f3c09938-2d27-4941-9b39-79ba14df0a7a",
+		"name": "Node.js REST API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34684057"
+	},
+	"item": [
+		{
+			"name": "Get All Posts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://posts-backend-dp5n.onrender.composts?sortBy=id&keyword=Titanic&page=1&pageSize=2&tag=romance",
+					"protocol": "https",
+					"host": [
+						"posts-backend-dp5n",
+						"onrender",
+						"composts"
+					],
+					"query": [
+						{
+							"key": "sortBy",
+							"value": "id"
+						},
+						{
+							"key": "keyword",
+							"value": "Titanic"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "pageSize",
+							"value": "2"
+						},
+						{
+							"key": "tag",
+							"value": "romance"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "title",
+							"value": "John Wick",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "An ex-hitman comes out of retirement to track down the gangsters who killed his dog and stole his car.",
+							"type": "text"
+						},
+						{
+							"key": "tag",
+							"value": "action",
+							"type": "text"
+						},
+						{
+							"key": "myPic",
+							"type": "file",
+							"src": []
+						}
+					]
+				},
+				"url": {
+					"raw": "https://posts-backend-dp5n.onrender.com/posts",
+					"protocol": "https",
+					"host": [
+						"posts-backend-dp5n",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"posts"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
